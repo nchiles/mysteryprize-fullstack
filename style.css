@@ -64,7 +64,7 @@ img {
 }
 
 #nameInput {
-    width: 30rem;
+    max-width: 50%;
     height: 2rem;
     text-align: center;
     font-size: 1rem;

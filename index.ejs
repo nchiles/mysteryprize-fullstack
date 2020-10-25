@@ -12,8 +12,7 @@
 <body>
 	<div class='container'>
 		<h1 class='title'>Mystery Prize</h1>
-		<div class='game'>	
-			<!-- <h3>1. Pick a prize!</h2> -->
+		<div class='game'>				
 			<form id='form'>
 				<div class='choices'>
 					<div class='choiceContainer'>
@@ -41,7 +40,6 @@
 					</div>					
 				</div>			
 
-				<!-- <h3>2. Enter your name!</h2> -->
 				<div class='submit'>
 					<input id='nameInput' type='text' placeholder='Add your name to see your prize!'></input>
 					<button type='button' onclick="addName()" id='submitButton'>Submit</button>
@@ -52,6 +50,9 @@
 			<div class='winners'>
 				<h2>Past Winners</h2>
 				<ul id='winnersList'>
+					<% results.forEach(function(r) { %>
+						<li name="item"><%= r.name %> - <%= r.prize %></li>>
+					<% }); %>
 				</ul>
 			</div>
 		</div>
