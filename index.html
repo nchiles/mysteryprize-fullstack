@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='style.css' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=Timmana&display=swap" rel="stylesheet">
+	<title>Mystery Prize</title>
+</head>
+
+<body>
+	<div class='container'>
+		<h1 class='title'>Mystery Prize</h1>
+		<div class='game'>	
+			<!-- <h3>1. Pick a prize!</h2> -->
+			<form id='form'>
+				<div class='choices'>
+					<div class='choiceContainer'>
+						<div id='imgRow'>
+							<div class='image'><img id='imageOne' src='img/1?.jpg'></div>
+							<div class='image'><img id='imageTwo' src='img/2?.jpg'></div>
+							<div class='image'><img id='imageThree' src='img/3?.jpg'></div>
+						</div>
+						
+						<div id='radios'>
+							<div class='radioGroup'>
+								<input type='radio' id='optionOne' name='prize' value='optionOne'>
+								<label for='optionOne'>Option One?</label>
+							</div>
+							<div class='radioGroup'>
+								<input type='radio' id='optionTwo' name='prize' value='optionTwo'>
+								<label for='optionTwo'>Option Two?</label>
+							</div>
+							<div class='radioGroup'>
+								<input type='radio' id='optionThree' name='prize' value='optionThree'>
+								<label for='optionThree'>Option Three?</label>
+							</div>
+							
+						</div>
+					</div>					
+				</div>			
+
+				<!-- <h3>2. Enter your name!</h2> -->
+				<div class='submit'>
+					<input id='nameInput' type='text' placeholder='Add your name to see your prize!'></input>
+					<button type='button' onclick="addName()" id='submitButton'>Submit</button>
+				</div>
+			</form>
+		</div>
+		<div>
+			<div class='winners'>
+				<h2>Past Winners</h2>
+				<ul id='winnersList'>
+				</ul>
+			</div>
+		</div>
+</div>
+	
+	<script src='script.js'></script>
+</body>
+
+</html>
