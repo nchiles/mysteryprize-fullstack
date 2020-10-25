@@ -1,6 +1,6 @@
 // var images = ['img/balloon.jpg', 'img/car1.jpg', 'img/car2.jpg', 'img/kazoo.jpg', 'img/vacation1.jpg', 'img/vacation2.jpg', 'img/vacation3.jpg', 'img/vacation4.jpg', 'img/stickyhand.jpg'];
 var images = [
-	{ src: 'img/balloon.jpg', val: 'balloon'}, 
+	{ src: 'img/balloon.jpg', val: 'balloon' },
 	{ src: 'img/car1.jpg', val: 'car' },
 	{ src: 'img/car2.jpg', val: 'car' },
 	{ src: 'img/kazoo.jpg', val: 'kazoo' },
@@ -13,10 +13,10 @@ var images = [
 
 function shuffle(arr) {
 	for (var i = arr.length - 1; i > 0; i--) {
-			var j = Math.floor(Math.random() * (i + 1));
-			var temp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = temp;
+		var j = Math.floor(Math.random() * (i + 1));
+		var temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 }
 
@@ -41,22 +41,22 @@ function disableForm() {
 
 loadImages();
 
-function addName() {
-  var li = document.createElement('li');
-	var inputValue = document.getElementById('nameInput').value;
-	var radioValue = document.querySelector('input[type="radio"]:checked').value;
-  var newLine = document.createTextNode(`${inputValue} won a ${radioValue}!`);
-  li.appendChild(newLine);
-  if (inputValue === '') {
-    alert('Add your name!');
-  } else {
-		document.getElementById('winnersList').appendChild(li);
-		document.getElementById('imgRow').style.filter = "blur(0px)";		
-	}
-	
-	disableForm()
+// function addName() {
+//   var li = document.createElement('li');
+// 	var inputValue = document.getElementById('nameInput').value;
+// 	var radioValue = document.querySelector('input[type="radio"]:checked').value;
+//   var newLine = document.createTextNode(`${inputValue} won a ${radioValue}!`);
+//   li.appendChild(newLine);
+//   if (inputValue === '') {
+//     alert('Add your name!');
+//   } else {
+// 		document.getElementById('winnersList').appendChild(li);
+// 		document.getElementById('imgRow').style.filter = "blur(0px)";		
+// 	}
 
-}
+// 	disableForm()
+
+// }
 
 
 

@@ -41,8 +41,8 @@
 				</div>			
 
 				<div class='submit'>
-					<input id='nameInput' type='text' placeholder='Add your name to see your prize!'></input>
-					<button type='button' onclick="addName()" id='submitButton'>Submit</button>
+					<input id='nameInput' type='text' name='name' placeholder='Add your name to see your prize!'></input>
+					<button type='submit' id='submitButton'>Submit</button>
 				</div>
 			</form>
 		</div>
@@ -51,7 +51,7 @@
 				<h2>Past Winners</h2>
 				<ul id='winnersList'>
 					<% results.forEach(function(r) { %>
-						<li name="item"><%= r.name %> - <%= r.prize %></li>>
+						<li><%= r.name %> won a <%= r.prize %>!</li>
 					<% }); %>
 				</ul>
 			</div>
