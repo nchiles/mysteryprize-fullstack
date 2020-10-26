@@ -31,7 +31,7 @@ function loadImages() {
 
 function disableForm() {
 	document.getElementById('submitButton').disabled = true;
-	document.getElementById('nameInput').value = "";
+	document.getElementById('nameInput').value = 'congrats?';
 	document.getElementById('nameInput').disabled = true;
 	document.getElementById('optionOne').disabled = true;
 	document.getElementById('optionTwo').disabled = true;
@@ -41,22 +41,25 @@ function disableForm() {
 loadImages();
 
 function addName() {
- var li = document.createElement('li');
+ 	var li = document.createElement('li');
 	var inputValue = document.getElementById('nameInput').value;
+	var winningImage = $('input[type="radio"]:checked').siblings('.image');
 	var radioValue = document.querySelector('input[type="radio"]:checked').value;
   var newLine = document.createTextNode(`${inputValue} won a ${radioValue}!`);
 	li.appendChild(newLine);
 	document.getElementById('winnersList').appendChild(li);
-	document.getElementById('imgRow').style.filter = "blur(0px)";
+	$('.image').css('filter', 'blur(0px) grayscale(1) opacity(0.5)');
+	$(winningImage).css('filter', 'grayscale(0)');
+	$('#playAgain').css('display', 'unset');
 	disableForm()
 }
 
 $('#submitButton').click(function(){
-	if (document.getElementById('nameInput').value === '') {
+	var inputValue = document.getElementById('nameInput').value;
+	var radioValue = document.querySelector('input[type="radio"]:checked').value;
+	if (inputValue === '') {
     alert('Add your name!');
-  } else {
-		var inputValue = document.getElementById('nameInput').value;
-		var radioValue = document.querySelector('input[type="radio"]:checked').value;
+  } else {				
 		$.ajax({ 
 			url: '/',
 			type: 'POST',

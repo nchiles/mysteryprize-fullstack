@@ -12,34 +12,23 @@ body {
 
 .title {
     font-family: 'Timmana', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
 }
 
 .game {
-    margin: 0 auto;
-	max-width: 70%;	
+    display:flex;
+    justify-content: center;
 }
 
-.choices {   
-    border-radius: 8px;
-    /* border: 1px solid white; */
-}
-
-.choiceContainer {
-    padding: 1rem;
-}
-
-#imgRow {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 1rem;
-    filter: blur(20px);
+#form {
+    margin: 1.5rem;
+    max-width: 600px;
 }
 
 .image {
-    max-width: 30%;
+    margin: 0.3rem;
+    filter: blur(20px);
 }
 
 img {
@@ -51,7 +40,7 @@ img {
 #radios {
     display: flex;
     justify-content: space-around;
-    margin-top: 1rem;
+    margin: 0.3rem;
 }
 
 .radioGroup label {
@@ -59,12 +48,12 @@ img {
 }
 
 .submit {
-    margin: 2rem 0 5rem 0;
-    height: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #nameInput {
-    max-width: 50%;
     height: 2rem;
     text-align: center;
     font-size: 1rem;
@@ -73,24 +62,42 @@ img {
     border-radius: 8px;
 }
 
+#nameInput:focus {   
+    outline: none;
+}
+
+#nameInput:focus::placeholder {   
+    color: #ebebeb;
+}
+
+#nameInput:disabled {
+    background-color: #d4dbd9;
+}
+
 button {    
-    margin: 0 auto;
     height: 2rem;
-    width: 8rem;
     border: 0;
     background: #0375ff;
     color: white;
     border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+button:hover {    
+    background: #006bee;
+}
+
+button:focus {
+    outline: none;
+    background-color: #0063E0;
 }
 
 button:disabled {    
-    margin: 0 auto;
-    height: 2rem;
-    width: 8rem;
-    border: 0;
-    background: #afafaf;
-    color: white;
-    border-radius: 8px;
+    background: #9fa5a3;
+}
+
+#playAgain {
+    display: none;
 }
 
 h2 {
@@ -101,7 +108,7 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 600px;
 }
 
 ul {

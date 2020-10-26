@@ -17,24 +17,21 @@
 			<form id='form'>
 				<div class='choices'>
 					<div class='choiceContainer'>
-						<div id='imgRow'>
-							<div class='image'><img id='imageOne' src=''></div>
-							<div class='image'><img id='imageTwo' src=''></div>
-							<div class='image'><img id='imageThree' src=''></div>
-						</div>
-						
 						<div id='radios'>
 							<div class='radioGroup'>
+								<div class='image'><img id='imageOne' src=''></div>
 								<input type='radio' id='optionOne' name='prize' value='optionOne' checked>
-								<label for='optionOne'>Option One?</label>
+								<!-- <label for='optionOne'>Option One?</label> -->
 							</div>
 							<div class='radioGroup'>
+								<div class='image'><img id='imageTwo' src=''></div>
 								<input type='radio' id='optionTwo' name='prize' value='optionTwo'>
-								<label for='optionTwo'>Option Two?</label>
+								<!-- <label for='optionTwo'>Option Two?</label> -->
 							</div>
 							<div class='radioGroup'>
+								<div class='image'><img id='imageThree' src=''></div>
 								<input type='radio' id='optionThree' name='prize' value='optionThree'>
-								<label for='optionThree'>Option Three?</label>
+								<!-- <label for='optionThree'>Option Three?</label> -->
 							</div>
 							
 						</div>
@@ -44,6 +41,7 @@
 				<div class='submit'>
 					<input id='nameInput' type='text' name='name' placeholder='Add your name to see your prize!'></input>
 					<button type='button' id='submitButton'>Submit</button>
+					<button type='button' id='playAgain' onClick='window.location.reload()'>Play Again</button>
 				</div>
 			</form>
 		</div>
